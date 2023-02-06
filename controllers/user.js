@@ -24,13 +24,6 @@ exports.SignUp = async (req, res) => {
 
     const cryptedPassword = await bcrypt.hash(password, 12);
 
-    // let isFan;
-    // let isTalent;
-    // if (talentSignup) {
-    //   isFan = false;
-    //   isTalent = true;
-    // }
-
     const user = await new User({
       username,
       mobile,
